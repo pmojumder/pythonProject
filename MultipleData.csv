@@ -1,0 +1,4 @@
+firstname,lastname,totalprice,depositpaid,checkin,checkout,additionalneeds
+John,Doe,150,True,2024-12-01,2024-12-10,Breakfast
+Jane,Smith,200,False,2024-12-05,2024-12-15,Wi-Fi
+Alice,Brown,300,True,2024-11-20,2024-11-30,Lunch

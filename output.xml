@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0.1 (Python 3.12.0 on win32)" generated="2024-09-22T00:20:13.178016" rpa="false" schemaversion="5">
+<suite id="s1" name="Date" source="C:\Users\Plabani\PycharmProjects\pythonProject\date.robot">
+<test id="s1-t1" name="Select Dates From Dynamic Datepicker" line="10">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-09-22T00:20:13.555122" level="INFO">Opening browser 'chrome' to base url 'https://www.makemytrip.com/'.</msg>
+<msg time="2024-09-22T00:20:14.279368" level="WARN">The chromedriver version (127.0.6533.72) detected in PATH at C:\Users\Plabani\AppData\Local\Programs\Python\Python312\Scripts\chromedriver.exe might not be compatible with the detected chrome version (128.0.6613.138); currently, chromedriver 128.0.6613.137 is recommended for chrome 128.*, so it is advised to delete the driver in PATH and retry</msg>
+<arg>${URL}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-09-22T00:20:13.555122" elapsed="5.293385"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-09-22T00:20:18.850779" elapsed="0.098642"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-09-22T00:20:33.952570" level="INFO">Slept 15 seconds.</msg>
+<arg>15s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-09-22T00:20:18.952172" elapsed="15.000398"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//span[text()='Departure']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-22T00:20:33.953581" elapsed="0.036163"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-09-22T00:20:33.989744" level="INFO">Clicking element 'xpath=//span[text()='Departure']'.</msg>
+<arg>xpath=//span[text()='Departure']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-22T00:20:33.989744" elapsed="0.128496"/>
+</kw>
+<kw name="Select Date">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-09-22T00:20:34.121741" level="INFO">${year} = 2024</msg>
+<var>${year}</var>
+<arg>${date}[0:4]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-09-22T00:20:34.120429" elapsed="0.001312"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-09-22T00:20:34.121741" level="INFO">${month} = 10</msg>
+<var>${month}</var>
+<arg>${date}[5:7]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-09-22T00:20:34.121741" elapsed="0.000000"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-09-22T00:20:34.121741" level="INFO">${day} = 10</msg>
+<var>${day}</var>
+<arg>${date}[8:10]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-09-22T00:20:34.121741" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-09-22T00:20:34.123982" level="INFO">Clicking element 'xpath=//input[@data-cy='departure']'.</msg>
+<msg time="2024-09-22T00:20:35.507043" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-16.png"&gt;&lt;img src="selenium-screenshot-16.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-09-22T00:20:35.507043" level="FAIL">ElementClickInterceptedException: Message: element click intercepted: Element &lt;input data-cy="departure" id="departure" type="text" class="fsw_inputField font20" readonly="" value="Sunday, 22 Sep 2024"&gt; is not clickable at point (910, 262). Other element would receive the click: &lt;span class="lbl_input appendBottom10"&gt;...&lt;/span&gt;
+  (Session info: chrome=128.0.6613.138)
+Stacktrace:
+	GetHandleVerifier [0x00007FF701A39632+30946]
+	(No symbol) [0x00007FF7019EE3C9]
+	(No symbol) [0x00007FF7018E6FDA]
+	(No symbol) [0x00007FF70193FEEE]
+	(No symbol) [0x00007FF70193D962]
+	(No symbol) [0x00007FF70193AE7B]
+	(No symbol) [0x00007FF70193A095]
+	(No symbol) [0x00007FF70192C271]
+	(No symbol) [0x00007FF70195CA6A]
+	(No symbol) [0x00007FF70192BBB6]
+	(No symbol) [0x00007FF70195CC80]
+	(No symbol) [0x00007FF70197B041]
+	(No symbol) [0x00007FF70195C813]
+	(No symbol) [0x00007FF70192A6E5]
+	(No symbol) [0x00007FF70192B021]
+	GetHandleVerifier [0x00007FF701B6F83D+1301229]
+	GetHandleVerifier [0x00007FF701B7BDB7+1351783]
+	GetHandleVerifier [0x00007FF701B72A03+1313971]
+	GetHandleVerifier [0x00007FF701A6DD06+245686]
+	(No symbol) [0x00007FF7019F758F]
+	(No symbol) [0x00007FF7019F3804]
+	(No symbol) [0x00007FF7019F3992]
+	(No symbol) [0x00007FF7019EA3EF]
+	BaseThreadInitThunk [0x00007FFF7A98257D+29]
+	RtlUserThreadStart [0x00007FFF7B78AF28+40]
+</msg>
+<arg>xpath=//input[@data-cy='departure']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="FAIL" start="2024-09-22T00:20:34.123982" elapsed="1.387608">ElementClickInterceptedException: Message: element click intercepted: Element &lt;input data-cy="departure" id="departure" type="text" class="fsw_inputField font20" readonly="" value="Sunday, 22 Sep 2024"&gt; is not clickable at point (910, 262). Other element would receive the click: &lt;span class="lbl_input appendBottom10"&gt;...&lt;/span&gt;
+  (Session info: chrome=128.0.6613.138)
+Stacktrace:
+	GetHandleVerifier [0x00007FF701A39632+30946]
+	(No symbol) [0x00007FF7019EE3C9]
+	(No symbol) [0x00007FF7018E6FDA]
+	(No symbol) [0x00007FF70193FEEE]
+	(No symbol) [0x00007FF70193D962]
+	(No symbol) [0x00007FF70193AE7B]
+	(No symbol) [0x00007FF70193A095]
+	(No symbol) [0x00007FF70192C271]
+	(No symbol) [0x00007FF70195CA6A]
+	(No symbol) [0x00007FF70192BBB6]
+	(No symbol) [0x00007FF70195CC80]
+	(No symbol) [0x00007FF70197B041]
+	(No symbol) [0x00007FF70195C813]
+	(No symbol) [0x00007FF70192A6E5]
+	(No symbol) [0x00007FF70192B021]
+	GetHandleVerifier [0x00007FF701B6F83D+1301229]
+	GetHandleVerifier [0x00007FF701B7BDB7+1351783]
+	GetHandleVerifier [0x00007FF701B72A03+1313971]
+	GetHandleVerifier [0x00007FF701A6DD06+245686]
+	(No symbol) [0x00007FF7019F758F]
+	(No symbol) [0x00007FF7019F3804]
+	(No symbol) [0x00007FF7019F3992]
+	(No symbol) [0x00007FF7019EA3EF]
+	BaseThreadInitThunk [0x00007FFF7A98257D+29]
+	RtlUserThreadStart [0x00007FFF7B78AF28+40]
+</status>
+</kw>
+<for flavor="IN RANGE">
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<var>${current_month_year}</var>
+<arg>xpath=//div[contains(@class, 'datePickerContainer')]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-09-22T00:20:35.511590" elapsed="0.000000"/>
+</kw>
+<kw name="Split String">
+<var>${month_year}</var>
+<arg>${current_month_year}</arg>
+<arg>${SPACE}</arg>
+<status status="NOT RUN" start="2024-09-22T00:20:35.511590" elapsed="0.000000"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<var>${displayed_month}</var>
+<arg>${month_year}[0]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" start="2024-09-22T00:20:35.511590" elapsed="0.000000"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<var>${displayed_year}</var>
+<arg>${month_year}[1]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" start="2024-09-22T00:20:35.511590" elapsed="0.000000"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<arg>Current displayed month/year: ${displayed_month} ${displayed_year}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2024-09-22T00:20:35.511590" elapsed="0.000000"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${displayed_month}'=='${month}' and '${displayed_year}'=='${year}'</arg>
+<arg>Exit For Loop</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="NOT RUN" start="2024-09-22T00:20:35.511590" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>xpath=//span[@aria-label='Next Month']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-09-22T00:20:35.511590" elapsed="0.000000"/>
+</kw>
+<var name="${i}"/>
+<status status="NOT RUN" start="2024-09-22T00:20:35.511590" elapsed="0.000000"/>
+</iter>
+<var>${i}</var>
+<value>12</value>
+<status status="NOT RUN" start="2024-09-22T00:20:35.511590" elapsed="0.000000"/>
+</for>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<arg>arguments[0].click();</arg>
+<arg>xpath=//div[@aria-label='${day} ${month} ${year}']</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="NOT RUN" start="2024-09-22T00:20:35.511590" elapsed="0.000000"/>
+</kw>
+<arg>${DEPARTURE_DATE}</arg>
+<status status="FAIL" start="2024-09-22T00:20:34.119725" elapsed="1.391865">ElementClickInterceptedException: Message: element click intercepted: Element &lt;input data-cy="departure" id="departure" type="text" class="fsw_inputField font20" readonly="" value="Sunday, 22 Sep 2024"&gt; is not clickable at point (910, 262). Other element would receive the click: &lt;span class="lbl_input appendBottom10"&gt;...&lt;/span&gt;
+  (Session info: chrome=128.0.6613.138)
+Stacktrace:
+	GetHandleVerifier [0x00007FF701A39632+30946]
+	(No symbol) [0x00007FF7019EE3C9]
+	(No symbol) [0x00007FF7018E6FDA]
+	(No symbol) [0x00007FF70193FEEE]
+	(No symbol) [0x00007FF70193D962]
+	(No symbol) [0x00007FF70193AE7B]
+	(No symbol) [0x00007FF70193A095]
+	(No symbol) [0x00007FF70192C271]
+	(No symbol) [0x00007FF70195CA6A]
+	(No symbol) [0x00007FF70192BBB6]
+	(No symbol) [0x00007FF70195CC80]
+	(No symbol) [0x00007FF70197B041]
+	(No symbol) [0x00007FF70195C813]
+	(No symbol) [0x00007FF70192A6E5]
+	(No symbol) [0x00007FF70192B021]
+	GetHandleVerifier [0x00007FF701B6F83D+1301229]
+	GetHandleVerifier [0x00007FF701B7BDB7+1351783]
+	GetHandleVerifier [0x00007FF701B72A03+1313971]
+	GetHandleVerifier [0x00007FF701A6DD06+245686]
+	(No symbol) [0x00007FF7019F758F]
+	(No symbol) [0x00007FF7019F3804]
+	(No symbol) [0x00007FF7019F3992]
+	(No symbol) [0x00007FF7019EA3EF]
+	BaseThreadInitThunk [0x00007FFF7A98257D+29]
+	RtlUserThreadStart [0x00007FFF7B78AF28+40]
+</status>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>xpath=//span[text()='RETURN']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-09-22T00:20:35.514140" elapsed="0.000000"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//span[text()='Return']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2024-09-22T00:20:35.515178" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>xpath=//span[text()='Return']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-09-22T00:20:35.516608" elapsed="0.000000"/>
+</kw>
+<kw name="Select Date">
+<arg>${RETURN_DATE}</arg>
+<status status="NOT RUN" start="2024-09-22T00:20:35.517778" elapsed="0.000000"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="NOT RUN" start="2024-09-22T00:20:35.518423" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2024-09-22T00:20:13.539520" elapsed="21.978903">ElementClickInterceptedException: Message: element click intercepted: Element &lt;input data-cy="departure" id="departure" type="text" class="fsw_inputField font20" readonly="" value="Sunday, 22 Sep 2024"&gt; is not clickable at point (910, 262). Other element would receive the click: &lt;span class="lbl_input appendBottom10"&gt;...&lt;/span&gt;
+  (Session info: chrome=128.0.6613.138)
+Stacktrace:
+	GetHandleVerifier [0x00007FF701A39632+30946]
+	(No symbol) [0x00007FF7019EE3C9]
+	(No symbol) [0x00007FF7018E6FDA]
+	(No symbol) [0x00007FF70193FEEE]
+	(No symbol) [0x00007FF70193D962]
+	(No symbol) [0x00007FF70193AE7B]
+	(No symbol) [0x00007FF70193A095]
+	(No symbol) [0x00007FF70192C271]
+	(No symbol) [0x00007FF70195CA6A]
+	(No symbol) [0x00007FF70192BBB6]
+	(No symbol) [0x00007FF70195CC80]
+	(No symbol) [0x00007FF70197B041]
+	(No symbol) [0x00007FF70195C813]
+	(No symbol) [0x00007FF70192A6E5]
+	(No symbol) [0x00007FF70192B021]
+	GetHandleVerifier [0x00007FF701B6F83D+1301229]
+	GetHandleVerifier [0x00007FF701B7BDB7+1351783]
+	GetHandleVerifier [0x00007FF701B72A03+1313971]
+	GetHandleVerifier [0x00007FF701A6DD06+245686]
+	(No symbol) [0x00007FF7019F758F]
+	(No symbol) [0x00007FF7019F3804]
+	(No symbol) [0x00007FF7019F3992]
+	(No symbol) [0x00007FF7019EA3EF]
+	BaseThreadInitThunk [0x00007FFF7A98257D+29]
+	RtlUserThreadStart [0x00007FFF7B78AF28+40]
+</status>
+</test>
+<status status="FAIL" start="2024-09-22T00:20:13.178016" elapsed="22.342897"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Date">Date</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2024-09-22T00:20:14.279368" level="WARN">The chromedriver version (127.0.6533.72) detected in PATH at C:\Users\Plabani\AppData\Local\Programs\Python\Python312\Scripts\chromedriver.exe might not be compatible with the detected chrome version (128.0.6613.138); currently, chromedriver 128.0.6613.137 is recommended for chrome 128.*, so it is advised to delete the driver in PATH and retry</msg>
+</errors>
+</robot>
