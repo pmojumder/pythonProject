@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git 'https://github.com/pmojumder/pythonProject.git'
+                git branch: 'main', url: 'https://github.com/pmojumder/pythonProject.git'
             }
         }
         stage('Setup Python Environment') {
