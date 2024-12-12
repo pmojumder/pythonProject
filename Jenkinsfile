@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        PYTHON_HOME = 'C:\\Python312'
+        PYTHON_HOME = 'C:\\Users\\Plabani\\AppData\\Local\\Programs\\Python\\Python312'
         VENV_PATH = 'venv'
         GIT_REPO_URL = 'https://github.com/pmojumder/pythonProject.git'
         BRANCH_NAME = 'main'
