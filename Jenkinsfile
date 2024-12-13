@@ -1,9 +1,21 @@
 pipeline {
     agent any
+    parameters {
+        string(name: 'ARTIFACT_VERSION', defaultValue: '', description: 'Artifact version to deploy')
+        string(name: 'DEPLOY_ENVIRONMENT', defaultValue: '', description: 'Deployment environment')
+    }
     stages {
         stage('Checkout') {
             steps {
                 git branch: 'main', url: 'https://github.com/pmojumder/pythonProject.git'
+            }
+        }
+        stage('Print Parameters') {
+            steps {
+                script {
+                    echo "Artifact Version: ${params.ARTIFACT_VERSION}"
+                    echo "Deployment Environment: ${params.DEPLOY_ENVIRONMENT}"
+                }
             }
         }
         stage('Setup Python Environment') {
